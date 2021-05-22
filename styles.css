@@ -1,0 +1,167 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #393e46;
+}
+
+/* NAV BAR SECTION */
+.nav-bar {
+  height: 6em;
+  background: #222831;
+}
+
+.nav-bar ul {
+  margin: 0 auto;
+  width: 60%;
+  float: left;
+  height: 6em;
+  display: flex;
+  list-style-type: none;
+}
+
+.nav-bar li {
+  font-size: 3rem;
+  margin-left: 1em;
+  padding: 0.25em 0;
+}
+
+.nav-bar li a {
+  text-decoration: none;
+  color: #eeeeee;
+  margin: 0 0.25em;
+}
+
+.nav-bar ul li:hover {
+  background: #0092ca;
+}
+
+/* This is the intro section with my name and scroll bar */
+
+/* The intro class houses my name */
+.intro {
+  width: 100%;
+  font-size: 4.25rem;   /* largest font I can use to keep the r from moving out of div at smaller screen sizes WHY IS THAT?? */
+  margin-top: 3em;
+  margin-bottom: 4em;
+  text-align: center;
+}
+
+
+.intro span {
+  display: inline-block; /* without this display it will not animate */
+  color: #eeeeee;
+  animation: animate 3s ease-in-out infinite;
+  animation-iteration-count: 1;
+  animation-delay: calc(0.1s * var(--i)); /*the calc gives it that wavy feel */
+}
+
+/* Makes sure the "aspiring developer" moves where and when I want it to */
+.aspiring {
+  display: inline-block;
+}
+
+/*This animates my name and scroll bar*/
+@keyframes animate {
+  0% {
+    transform: translateY(0px);
+  }
+
+  20% {
+    transform: translateY(-20px);
+  }
+
+  40%, 100% {
+    transform: translateY(0px);
+  }
+}
+
+/* When screen is smaller than 1680 I want the text to be center */
+@media (max-width: 1679px) {
+  .intro {
+    text-align: center;
+  }
+}
+
+/*scroll icon*/
+.scroll-img {
+  color: #eeeeee;
+  animation: animate 2s ease-in-out infinite;
+  animation-iteration-count: infinite;
+  animation-delay: 4s;
+  text-align: center;
+}
+
+/*sizing and spacing for icon and paragraph*/
+.scroll-img i {
+  font-size: 4rem;
+}
+
+.scroll-img p {
+  padding-top: 0.5em;
+}
+
+/* ABOUT SECTION */
+.about-title {
+  text-align: center;
+  color: #eeeeee;
+  font-size: 3rem;
+  font-weight: 700;
+  padding-bottom: 2em;
+}
+.about {
+  width: 100%;
+  background-color: #eeeeee;
+  display: flex;
+  border: 2px solid red;
+}
+.self-photo {
+  border-radius: 50%;
+  height: 29em;
+  min-width: 14em;
+  max-width: 28em;
+  margin: auto;
+}
+.about-right {
+  border-bottom: 45em solid #393e46;
+  border-left: 8em solid rgba(0, 0, 0, 0);
+  height: 0;
+  width: 50%;
+  color: #eeeeee;
+
+}
+.about-content {
+  border: 2px solid green;
+  position: relative;
+
+}
+.about-content p {
+  font-size: 1.5rem;
+  text-align: center;
+
+}
+
+@media (max-width: 1302px) {
+  .self-photo {
+    padding-left: 1.5em;
+  }
+}
+
+
+hr {
+  margin-top: 1000px;
+}
+
+
+
+
+
+
+/* .about-border {
+  box-shadow: 0 0 5px 5px #0092ca;
+} */
