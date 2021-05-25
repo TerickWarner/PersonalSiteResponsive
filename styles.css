@@ -159,9 +159,16 @@ body {
   margin: 0 auto;
 }
 
+
 /* Paragraph classes will be used to center and space out each paragraph */
 .top-paragraph {
   margin-top: 5em;
+}
+
+@media (max-width: 1302px) {
+  .top-paragraph {
+    margin-top: 2em;
+  }
 }
 
 .bottom-paragraph {
