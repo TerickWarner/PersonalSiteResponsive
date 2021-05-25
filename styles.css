@@ -42,23 +42,24 @@ body {
 }
 
 /* This is the intro section with my name and scroll bar */
-
 /* The intro class houses my name */
 .intro {
   width: 100%;
-  font-size: 4.25rem;   /* largest font I can use to keep the r from moving out of div at smaller screen sizes WHY IS THAT?? */
+  font-size: 4.25rem;
+  /* largest font I can use to keep the r from moving out of div at smaller screen sizes WHY IS THAT?? */
   margin-top: 3em;
   margin-bottom: 4em;
   text-align: center;
 }
 
-
 .intro span {
-  display: inline-block; /* without this display it will not animate */
+  display: inline-block;
+  /* without this display it will not animate */
   color: #eeeeee;
   animation: animate 3s ease-in-out infinite;
   animation-iteration-count: 1;
-  animation-delay: calc(0.1s * var(--i)); /*the calc gives it that wavy feel */
+  animation-delay: calc(0.1s * var(--i));
+  /*the calc gives it that wavy feel */
 }
 
 /* Makes sure the "aspiring developer" moves where and when I want it to */
@@ -107,6 +108,12 @@ body {
 }
 
 /* ABOUT SECTION */
+/* Added blue border to about section will be added to other sections */
+.border {
+  box-shadow: 0 0 5px 5px #0092ca;
+}
+
+/* Deals with section title. Gives appropriate size and boldens h1 */
 .about-title {
   text-align: center;
   color: #eeeeee;
@@ -114,54 +121,261 @@ body {
   font-weight: 700;
   padding-bottom: 2em;
 }
+
+/* Sets the about section to flex and allows me to control child elements */
 .about {
   width: 100%;
   background-color: #eeeeee;
   display: flex;
-  border: 2px solid red;
 }
+
+/* Sets photo height, makes it round, and sets max width to not interfere with right section */
 .self-photo {
   border-radius: 50%;
   height: 29em;
-  min-width: 14em;
-  max-width: 28em;
   margin: auto;
-}
-.about-right {
-  border-bottom: 45em solid #393e46;
-  border-left: 8em solid rgba(0, 0, 0, 0);
-  height: 0;
-  width: 50%;
-  color: #eeeeee;
-
-}
-.about-content {
-  border: 2px solid green;
-  position: relative;
-
-}
-.about-content p {
-  font-size: 1.5rem;
-  text-align: center;
-
+  max-width: 400px;
 }
 
+/* Gives padding on left side when on smaller screens */
 @media (max-width: 1302px) {
   .self-photo {
     padding-left: 1.5em;
   }
 }
 
+/* Slanted border-works with display:flex in about parent */
+.about-right {
+  border-bottom: 45em solid #393e46;
+  border-left: 8em solid rgba(0, 0, 0, 0);
+  height: 0;
+  width: 50%;
+  color: #eeeeee;
+}
 
-hr {
-  margin-top: 1000px;
+.about-content {
+  text-align: center;
+  width: 90%;
+  margin: 0 auto;
+}
+
+/* Paragraph classes will be used to center and space out each paragraph */
+.top-paragraph {
+  margin-top: 5em;
+}
+
+.bottom-paragraph {
+  margin-top: 1.5em;
+}
+
+/* 1.5 is max size for all content to fit in div without overflow */
+.about-content p {
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+/* THIS IS THE PORTFOLIO SECTION */
+/* Portfolio title same as about title (could combine but while I'm tweaking I want to make them seperate) */
+.portfolio-title {
+  text-align: center;
+  color: #eeeeee;
+  font-size: 2.5rem;
+  font-weight: 700;
+  padding-bottom: 2em;
+}
+
+.portfolio-stack {
+  background-color: #eeeeee;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  width: 50%;
+  padding: 2em 2em;
+}
+
+.portfolio-stack i {
+  font-size: 6rem;
+  color: #222831;
+}
+
+.portfolio-content {
+  margin: 6em auto;
+  width: 80%;
+  background-color: #eeeeee;
+  display: flex;
+}
+
+.portfolio-photo-left {
+  border-right: 10px dashed black;
+  width: 30%;
+  display: flex;
+  align-items: center;
+  margin: 1em 0;
+}
+
+.portfolio-photo-left img {
+  height: 6em;
+  width: 4em;
+  margin: 0 auto;
+}
+
+.portfolio-content-right {
+  padding: 2em 3em;
+  width: 70%;
+}
+
+.portfolio-photo-right {
+  border-left: 10px dashed black;
+  width: 30%;
+  display: flex;
+  align-items: center;
+  margin: 1em 0;
+}
+
+.portfolio-content-left {
+  padding: 2em 3em;
+  width: 70%;
+}
+
+.portfolio-photo-right img {
+  height: 6em;
+  width: 4em;
+  margin: 0 auto;
+}
+
+.contact-me {
+  display: flex;
+}
+
+.contact-info {
+  width: 50%;
+  font-size: 3rem; /* 2rem max for mobile media query might be neccessary */
+  color: #eeeeee;
+  padding: 0 1em;
+}
+
+.contact-info i {
+  color: #0092ca;
+}
+
+@media (max-width: 1305px) {
+  .contact-info {
+    font-size: 2.2rem;
+  }
+}
+
+#location {
+  display: flex;
+  justify-content: center;
+  padding: 1.25em 0;
+}
+#location p {
+    padding-left: 1em;
+}
+
+#email {
+  display: flex;
+  justify-content: center;
+  padding: 1.25em 0;
+}
+#email p {
+  padding-left: 1em;
+}
+
+#phone {
+  display: flex;
+  justify-content: center;
+  padding: 1.25em 0;
+}
+#phone p {
+  padding-left: 1em;
+}
+
+#resume {
+  display: flex;
+  justify-content: center;
+  padding: 1.25em 0;
+}
+#resume p {
+  padding-left: 1em;
 }
 
 
 
+/* THIS IS THE CONTACT FORM */
+.contact-form {
+  border-left: 10px dashed #0092ca;
+  width: 50%;
+  color: #eeeeee;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-bg {
+  background-color: #0092ca;
+  width: 75%;
+  height: 80%;
+  padding: 1em 2em;
+}
+
+.contact-form h1 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1em;
+}
+/* Style inputs with type="text", select elements and textareas */
+input[type=text], select, textarea {
+  display: flex;
+  width: 100%; /* Full width */
+  padding: 12px; /* Some padding */
+  border: 2px solid #0092ca; /* Gray border */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 0.5em; /* Add a top margin */
+  margin-bottom: 1.5em; /* Bottom margin */
+  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+#email {
+  padding: 12px;
+}
+textarea {
+  height: 8em;
+}
+/* Style the submit button with a specific background color etc */
+input[type=submit] {
+  background-color: black;
+  color: white;
+  padding: 1em 1.5em;
+  border: none;
+  border-radius: 5%;
+  cursor: pointer;
+  margin: 0 auto;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+input[type=submit]:hover {
+  background-color: black;
+}
 
 
 
-/* .about-border {
-  box-shadow: 0 0 5px 5px #0092ca;
-} */
+/* THIS IS THE FOOTER */
+.footer {
+  margin-top: 0;
+  text-align: center;
+  background-color: #393e46;
+  padding: 2% 2%;
+}
+
+.footer-links {
+  font-size: 3rem;
+  padding-bottom: 0.5em;
+  color: #0092ca;
+}
+
+.footer-text {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #eeeeee;
+}
