@@ -11,9 +11,14 @@ html, body {
   background-color: #393e46;
 }
 
-.full-height {
+.intro-height {
   height: 100%;
   background: #393e46;
+}
+
+.about-height {
+  height: 50%;
+  margin-top: 15px;
 }
 
 /* NAV BAR SECTION */
@@ -162,23 +167,58 @@ html, body {
 .about-content {
   text-align: center;
   width: 90%;
-  margin: 0 auto;
+  margin: 1em auto;
 }
 
+.about-content h2 {
+  font-size: 2.5rem;
+}
 
 /* Paragraph classes will be used to center and space out each paragraph */
 .top-paragraph {
-  margin-top: 5em;
+  margin-top: 1em;
+}
+
+.top-paragraph img {
+  height: 16em;
+  width: 16em;
+  margin: 1em 0;
+}
+
+@media (max-width: 1905px) {
+  .about-content {
+    margin: 1em auto;
+  }
+
+  .top-paragraph img {
+    display: none;
+  }
 }
 
 @media (max-width: 1302px) {
   .top-paragraph {
-    margin-top: 2em;
+    margin-top: 0;
+  }
+  .top-paragraph p {
+    margin-top: 0.25em;
   }
 }
 
 .bottom-paragraph {
-  margin-top: 1.5em;
+  margin-top: 1em;
+}
+
+.bottom-paragraph p {
+  margin-top: 1em;
+}
+
+@media (max-width: 1100px) {
+  .bottom-paragraph {
+    margin-top: 1em;
+  }
+  .bottom-paragraph p {
+    margin-top: 0;
+  }
 }
 
 /* 1.5 is max size for all content to fit in div without overflow */
@@ -262,7 +302,8 @@ html, body {
 
 .contact-info {
   width: 50%;
-  font-size: 3rem; /* 2rem max for mobile media query might be neccessary */
+  font-size: 3rem;
+  /* 2rem max for mobile media query might be neccessary */
   color: #eeeeee;
   padding: 0 1em;
 }
@@ -282,8 +323,9 @@ html, body {
   justify-content: center;
   padding: 1.25em 0;
 }
+
 #location p {
-    padding-left: 1em;
+  padding-left: 1em;
 }
 
 #email {
@@ -291,6 +333,7 @@ html, body {
   justify-content: center;
   padding: 1.25em 0;
 }
+
 #email p {
   padding-left: 1em;
 }
@@ -300,6 +343,7 @@ html, body {
   justify-content: center;
   padding: 1.25em 0;
 }
+
 #phone p {
   padding-left: 1em;
 }
@@ -309,11 +353,10 @@ html, body {
   justify-content: center;
   padding: 1.25em 0;
 }
+
 #resume p {
   padding-left: 1em;
 }
-
-
 
 /* THIS IS THE CONTACT FORM */
 .contact-form {
@@ -338,23 +381,34 @@ html, body {
   font-size: 2rem;
   margin-bottom: 1em;
 }
+
 /* Style inputs with type="text", select elements and textareas */
 input[type=text], select, textarea {
   display: flex;
-  width: 100%; /* Full width */
-  padding: 12px; /* Some padding */
-  border: 2px solid #0092ca; /* Gray border */
-  box-sizing: border-box; /* Make sure that padding and width stays in place */
-  margin-top: 0.5em; /* Add a top margin */
-  margin-bottom: 1.5em; /* Bottom margin */
-  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+  width: 100%;
+  /* Full width */
+  padding: 12px;
+  /* Some padding */
+  border: 2px solid #0092ca;
+  /* Gray border */
+  box-sizing: border-box;
+  /* Make sure that padding and width stays in place */
+  margin-top: 0.5em;
+  /* Add a top margin */
+  margin-bottom: 1.5em;
+  /* Bottom margin */
+  resize: vertical
+    /* Allow the user to vertically resize the textarea (not horizontally) */
 }
+
 #email {
   padding: 12px;
 }
+
 textarea {
   height: 8em;
 }
+
 /* Style the submit button with a specific background color etc */
 input[type=submit] {
   background-color: black;
@@ -370,8 +424,6 @@ input[type=submit] {
 input[type=submit]:hover {
   background-color: black;
 }
-
-
 
 /* THIS IS THE FOOTER */
 .footer {
