@@ -16,10 +16,6 @@ html, body {
   background: #393e46;
 }
 
-.about-height {
-  height: 50%;
-  margin-top: 15px;
-}
 
 /* NAV BAR SECTION */
 .nav-bar {
@@ -130,7 +126,7 @@ html, body {
   color: #eeeeee;
   font-size: 3rem;
   font-weight: 700;
-  padding-bottom: 2em;
+  padding-bottom: 1.5em;
 }
 
 /* Sets the about section to flex and allows me to control child elements */
@@ -171,7 +167,7 @@ html, body {
 }
 
 .about-content h2 {
-  font-size: 2rem;
+  font-size: 2.5rem;
 }
 
 /* Paragraph classes will be used to center and space out each paragraph */
@@ -223,7 +219,7 @@ html, body {
 
 /* 1.5 is max size for all content to fit in div without overflow */
 .about-content p {
-  font-size: 1.1rem;
+  font-size: 1.5rem;
   text-align: center;
 }
 
@@ -235,6 +231,7 @@ html, body {
   font-size: 2.5rem;
   font-weight: 700;
   padding-bottom: 2em;
+  margin-top: 3em;
 }
 
 .portfolio-stack {
@@ -267,9 +264,52 @@ html, body {
 }
 
 .portfolio-photo-left img {
-  height: 6em;
-  width: 4em;
+  height: 20em;
+  width: 20em;
   margin: 0 auto;
+}
+
+@media (max-width: 1570px) {
+  .portfolio-content {
+    margin: 6em auto;
+    width: 80%;
+    background-color: #eeeeee;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .portfolio-photo-left {
+    border-right: hidden;
+    border-bottom: 10px dashed black;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    margin: 0;
+  }
+
+  .portfolio-photo-left img {
+    height: 30em;
+    width: 30em;
+    margin: 2em auto;
+  }
+
+  .portfolio-content-right {
+    text-align: center;
+    padding: 0 3em;
+    width: 80%;
+  }
+
+  .portfolio-content-right h1 {
+    font-size: 2.5rem;
+  }
+
+  .portfolio-content-right h2 {
+    margin-bottom: 0.5em;
+  }
+
+  .portfolio-content-right p {
+    font-size: 1.5rem;
 }
 
 .portfolio-content-right {
