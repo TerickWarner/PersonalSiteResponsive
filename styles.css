@@ -16,6 +16,10 @@ html, body {
   background: #393e46;
 }
 
+.about-height {
+  height: 50%;
+  margin-top: 15px;
+}
 
 /* NAV BAR SECTION */
 .nav-bar {
@@ -231,7 +235,7 @@ html, body {
   font-size: 2.5rem;
   font-weight: 700;
   padding-bottom: 2em;
-  margin-top: 3em;
+  margin-top: 2.5em;
 }
 
 .portfolio-stack {
@@ -248,29 +252,38 @@ html, body {
   color: #222831;
 }
 
-.portfolio-content {
-  margin: 6em auto;
+
+
+
+
+
+
+
+.portfolio-content-gin {
   width: 80%;
-  background-color: #eeeeee;
+  margin: 6em auto;
+  text-align: center;
   display: flex;
+  background: #eeeeee;
+  padding: 1.5em 1em;
 }
 
-.portfolio-photo-left {
-  border-right: 10px dashed black;
-  width: 30%;
-  display: flex;
-  align-items: center;
-  margin: 1em 0;
+.portfolio-photo-gin {
+  border-right: dashed;
+  border-width: 10px;
+  margin-right: 1.5em;
 }
 
-.portfolio-photo-left img {
-  height: 20em;
-  width: 20em;
-  margin: 0 auto;
+.portfolio-photo-gin img {
+  margin: 2em;
+}
+
+.portfolio-content-gin {
+  font-size: 2rem;
 }
 
 @media (max-width: 1570px) {
-  .portfolio-content {
+  .portfolio-content-gin {
     margin: 6em auto;
     width: 80%;
     background-color: #eeeeee;
@@ -279,7 +292,7 @@ html, body {
     align-items: center;
   }
 
-  .portfolio-photo-left {
+  .portfolio-photo-gin {
     border-right: hidden;
     border-bottom: 10px dashed black;
     width: 90%;
@@ -288,34 +301,49 @@ html, body {
     margin: 0;
   }
 
-  .portfolio-photo-left img {
-    height: 30em;
-    width: 30em;
+  .portfolio-photo-gin img {
+    height: 21em;
+    width: 21em;
     margin: 2em auto;
   }
 
-  .portfolio-content-right {
+  .portfolio-paragraph-gin {
     text-align: center;
     padding: 0 3em;
     width: 80%;
   }
 
-  .portfolio-content-right h1 {
-    font-size: 2.5rem;
+  .portfolio-paragraph-gin h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-top: 0.5em;
   }
 
-  .portfolio-content-right h2 {
+  .portfolio-paragraph-gin h2 {
+    font-size: 2.5rem;
+    font-weight: 600;
     margin-bottom: 0.5em;
   }
 
-  .portfolio-content-right p {
-    font-size: 1.5rem;
+  .portfolio-paragraph-gin p {
+    font-size: 1.7rem;
 }
 
-.portfolio-content-right {
-  padding: 2em 3em;
-  width: 70%;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .portfolio-photo-right {
   border-left: 10px dashed black;
