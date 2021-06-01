@@ -17,7 +17,7 @@
           <li><a href="#">Home</a></li>
           <li><a href="#about-section">About</a></li>
           <li><a href="#portfolio-section">Portfolio</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><a href="#contact-section">Contact</a></li>
         </ul>
       </nav>
     </div>
@@ -77,7 +77,7 @@
     </div>
     <div class="border">
       <div class="about">
-        <img class="self-photo" src="selfie.jpg" alt="Photo of Terick Warner in a professional manner">
+        <img class="self-photo" src="me.jpeg" alt="Photo of Terick Warner in a professional manner">
         <div class="about-right">
           <div class="about-content">
             <h2>Professionally...</h2>
@@ -130,6 +130,11 @@
         <p>This website, created using bootstrap, is a fake alcohol company based off the television series Peaky Blinders.
           The website demonstrates an ability to learn and utilize popular front-end frameworks to create responsive, professional looking websites.
         </p>
+
+        <div class="button">
+          <a href="https://github.com/TerickWarner/ShelbyDryGin" class="button"><i class="fab fa-github"></i> github</a>
+        </div>
+
       </div>
     </div>
 
@@ -140,6 +145,10 @@
         <p>A Big Beef, a phrase popularized by the No Dunks podcast, is when an NBA player grabs 20 or more rebounds in a single game. This program uses the NBA_API
           to fetch and use player statistics found on the NBA’s website to track individual rebound statistics.
           The program also has the ability to tweet on the account @bigbeefbot on Twitter, but is not currently active.</p>
+
+        <div class="button">
+          <a href="https://github.com/TerickWarner/BigBeefTracker" class="button"><i class="fab fa-github"></i> github</a>
+        </div>
       </div>
 
       <div class="portfolio-photo-beef">
@@ -158,67 +167,75 @@
           By using python’s built in module, tkinter, I created a graphical user interface that allows you to keep track
           of words you still need to study.
         </p>
+        <div class="button">
+          <a href="https://github.com/TerickWarner/Spanish-Flash-Cards" class="button"><i class="fab fa-github"></i> github</a>
+        </div>
       </div>
     </div>
   </section>
 
   <hr style="margin-bottom: 2em;">
-  <div class="contact-me">
-    <div class="contact-info">
-      <div id=location>
-        <i class="fas fa-map-marker-alt"></i>
-        <p>Noblesville, Indiana</p>
-      </div>
-      <div id="email">
-        <i class="fas fa-envelope"></i>
-        <p>terick.warner@gmail.com</p>
-      </div>
-      <div id="phone">
-        <i class="fas fa-phone-square"></i>
-        <p>765-623-5043</p>
-      </div>
-      <!-- <div id="resume">
-        <i class="fas fa-file"></i>
-        <p>Resume Download</p>
-      </div> -->
+
+  <section id="contact-section">
+    <a id="about-section"></a>
+    <div class="contact-me">
+      <div class="contact-info">
+        <div id=location>
+          <i class="fas fa-map-marker-alt"></i>
+          <p>Noblesville, Indiana</p>
+        </div>
+        <div id="email">
+          <i class="fas fa-envelope"></i>
+          <p>terick.warner@gmail.com</p>
+        </div>
+        <div id="phone">
+          <i class="fas fa-phone-square"></i>
+          <p>765-623-5043</p>
+        </div>
+        <!-- <div id="resume">
+      <i class="fas fa-file"></i>
+      <p>Resume Download</p>
+    </div> -->
 
 
+      </div>
+
+
+
+      <div class="contact-form">
+        <h1>Contact Me!</h1>
+        <div class="contact-bg">
+
+
+
+          <form action="action_page.php">
+
+            <label for="fname">Your Name</label>
+            <input type="text" id="fname" name="fullname" placeholder="Your name..">
+
+            <label for="email">Email</label>
+            <input type="text" id="email" name="email" placeholder="Your email..">
+
+            <label for="subject">Subject</label>
+            <textarea id="subject" name="subject" placeholder="Write something.."></textarea>
+
+            <input type="submit" value="Submit">
+
+          </form>
+        </div>
+
+      </div>
     </div>
+  </section>
 
-
-
-    <div class="contact-form">
-      <h1>Contact Me!</h1>
-      <div class="contact-bg">
-
-
-
-        <form action="action_page.php">
-
-          <label for="fname">Your Name</label>
-          <input type="text" id="fname" name="fullname" placeholder="Your name..">
-
-          <label for="email">Email</label>
-          <input type="text" id="email" name="email" placeholder="Your email..">
-
-          <label for="subject">Subject</label>
-          <textarea id="subject" name="subject" placeholder="Write something.."></textarea>
-
-          <input type="submit" value="Submit">
-
-        </form>
-      </div>
-
-    </div>
-  </div>
 
   <hr style="margin-top: 2em;">
   <section>
     <footer>
       <div class="footer">
         <div class="footer-links">
-          <i class="social-icon fab fa-twitter"></i>
-          <i class="fab fa-github"></i>
+          <a href="https://github.com/TerickWarner" class="footer-icon"><i class="social-icon fab fa-twitter"></i></a>
+          <a href="https://twitter.com/terickcodes" class="footer-icon"><i class="fab fa-github"></i>
         </div>
         <div class="footer-text">
           <p>© Copyright 2021 Terick Warner</p>
@@ -229,47 +246,6 @@
   </section>
 
 </body>
-<!-- @media (max-width: 1570px) {
-  .portfolio-content {
-    margin: 6em auto;
-    width: 80%;
-    background-color: #eeeeee;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
 
-  .portfolio-photo-left {
-    border-right: hidden;
-    border-bottom: 10px dashed black;
-    width: 90%;
-    display: flex;
-    align-items: center;
-    margin: 0;
-  }
-
-  .portfolio-photo-left img {
-    height: 30em;
-    width: 30em;
-    margin: 2em auto;
-  }
-
-  .portfolio-content-right {
-    text-align: center;
-    padding: 0 3em;
-    width: 80%;
-  }
-
-  .portfolio-content-right h1 {
-    font-size: 2.5rem;
-  }
-
-  .portfolio-content-right h2 {
-    margin-bottom: 0.5em;
-  }
-
-  .portfolio-content-right p {
-    font-size: 1.5rem;
-} -->
 
 </html>
